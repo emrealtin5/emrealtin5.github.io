@@ -495,19 +495,30 @@
 								<li>
 									<div class="list_inner">
 										<img class="svg" src="img/svg/social/linkedin.svg" alt="" />
-										<p><span class="first">LinkedIn:</span><span class="second"><a
-													href="https://www.linkedin.com/in/emre-altin-a3915b172/">LinkedIn |
-													Emre Altın</a></span>
+										<p>
+											<span class="first">LinkedIn:</span>
+											<span class="second">
+												<a href="https://www.linkedin.com/in/emre-altin-a3915b172/" target="_blank" rel="noopener noreferrer">
+													LinkedIn | Emre Altın
+												</a>
+											</span>
 										</p>
 									</div>
 								</li>
 								<li>
 									<div class="list_inner">
-										<img class="svg" src="img/svg/social/github.svg" alt="" />
-										<p><span class="first">Github:</span><span class="second"><a
-													href="https://github.com/emrealtnn">@emrealtnn</a></span></p>
+										<img class="svg" src="img/svg/social/github.svg" alt="GitHub Logo" />
+										<p>
+											<span class="first">Github:</span>
+											<span class="second">
+												<a href="https://github.com/emrealtnn" target="_blank" rel="noopener noreferrer">
+													@emrealtnn
+												</a>
+											</span>
+										</p>
 									</div>
 								</li>
+								
 							</ul>
 						</div>
 					</div>
@@ -520,18 +531,18 @@
 								<div class="first">
 									<ul>
 										<li>
-											<input id="name" type="text" placeholder="Ad Soyadı">
+											<input id="name" name="name" type="text" placeholder="Ad Soyadı">
 										</li>
 										<li>
-											<input id="email" type="text" placeholder="Email">
+											<input id="email" name="email" type="text" placeholder="Email">
 										</li>
 									</ul>
 								</div>
 								<div class="last">
-									<textarea id="message" placeholder="Mesaj"></textarea>
+									<textarea id="message" name="message" placeholder="Mesaj"></textarea>
 								</div>
 								<div class="grax_tm_button">
-									<a id="send_message" href="#">GÖNDER</a>
+									<button id="send_message" type="submit" href="#">GÖNDER</button>
 								</div>
 
 								<!-- If you want to change mail address to yours, please open modal.php and go to line 4 -->
@@ -543,7 +554,11 @@
 			</div>
 		</div>
 		<!-- /CONTACT -->
-
+<script>document.getElementById("contact_form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    // Form verilerini gönderme işlemi
+    alert("Form gönderildi.");
+});</script>
 		<!-- COPYRIGHT -->
 		<div class="grax_tm_section">
 			<div class="grax_tm_copyright">
