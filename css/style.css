@@ -1005,13 +1005,14 @@ h6 {
 	float: left;
 }
 
-.grax_tm_button a {
+.grax_tm_button button {
+	width: 100%;
 	text-decoration: none;
 	color: #fff;
 	display: inline-block;
-	background-color: #e54b4b;
-	border: 2px solid #e54b4b;
-	padding: 10px 40px;
+	background-color: #FF9800;
+	border: 2px solid #FF9800;
+	padding: 15px;
 	border-radius: 5px;
 
 	-webkit-transition: all .3s ease;
@@ -1021,9 +1022,9 @@ h6 {
 	transition: all .3s ease;
 }
 
-.grax_tm_button a:hover {
+.grax_tm_button button:hover {
 	background-color: transparent !important;
-	color: #000;
+	color: #FF9800;
 }
 
 .grax_tm_progress_part {
@@ -2084,7 +2085,7 @@ body.modal {
 	font-weight: 500;
 }
 
-.grax_tm_contact .grax_tm_button a {
+.grax_tm_contact .grax_tm_button button {
 	display: block;
 	text-align: center;
 }
