@@ -462,6 +462,15 @@ h6 {
 	padding: 20px 0px;
 	border-bottom: 1px solid rgba(0, 0, 0, .2);
 }
+body.dark .grax_tm_mobile_menu .topbar_inner {
+	width: 100%;
+	height: auto;
+	float: left;
+	clear: both;
+	background-color: #000;
+	padding: 20px 0px;
+	border-bottom: 1px solid rgba(256, 256, 256, .2);
+}
 
 .grax_tm_mobile_menu .topbar_in {
 	width: 100%;
@@ -508,6 +517,21 @@ h6 {
 	width: 30px;
 	height: 2px;
 	background-color: #333333;
+	position: absolute;
+	transition-property: transform;
+	transition-duration: 0.15s;
+	transition-timing-function: ease;
+
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+body.dark .my_trigger .hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+	width: 30px;
+	height: 2px;
+	background-color: #fff;
 	position: absolute;
 	transition-property: transform;
 	transition-duration: 0.15s;
@@ -590,6 +614,18 @@ h6 {
 	-o-transition: all .3s ease;
 	transition: all .3s ease;
 }
+body.dark .my_trigger .hamburger .hamburger-inner::before,
+body.dark .my_trigger .hamburger .hamburger-inner::after,
+body.dark .my_trigger .hamburger .hamburger-inner {
+	background-color: #fff;
+	width: 30px;
+
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
 
 .grax_tm_mobile_menu .dropdown {
 	width: 100%;
@@ -597,6 +633,15 @@ h6 {
 	clear: both;
 	float: left;
 	background-color: #fff;
+	border-bottom: 1px solid rgba(0, 0, 0, .2);
+	display: none;
+}
+body.dark .grax_tm_mobile_menu .dropdown {
+	width: 100%;
+	height: auto;
+	clear: both;
+	float: left;
+	background-color: #000;
 	border-bottom: 1px solid rgba(0, 0, 0, .2);
 	display: none;
 }
@@ -628,10 +673,31 @@ h6 {
 	font-family: "Montserrat";
 	font-weight: 500;
 }
-
-.grax_tm_mobile_menu .logo img {
-	max-width: 70px;
+body.dark .grax_tm_mobile_menu .dropdown .dropdown_inner ul li a {
+	text-decoration: none;
+	color: #fff;
+	display: inline-block;
+	padding: 4px 0px;
+	font-family: "Montserrat";
+	font-weight: 500;
 }
+
+.logo-link {
+    display: block;
+    width: 200px;
+    height: 30px;
+    background-image: url('../img/logo/dark.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+body.dark .logo-link {
+    background-image: url('../img/logo/logo.png');
+}
+
+
+
+
 
 /*---------------------------------------------------*/
 /*	04) Emre ALTIN HERO
