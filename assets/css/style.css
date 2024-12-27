@@ -3226,3 +3226,56 @@ body.dark .grax_tm_settings .cursor li .svg,
 		padding-left: 0px;
 	}
 }
+
+.language-selector {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.language-selector button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.language-selector button:focus {
+    outline: none;
+    background-color: #ddd;
+}
+
+.language-selector {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.language-selector select {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.language-selector select:hover {
+    border-color: #ff9800;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}
+
+.language-selector select:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.7);
+    outline: none;
+}
+
+.language-selector select option {
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+}
