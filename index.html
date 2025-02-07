@@ -1,585 +1,853 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-<head>
+    <meta name="description" content="Name of your web site" />
+    <meta name="author" content="Marketify" />
 
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
 
+    <title>Emre ALTIN</title>
+    <link rel="icon" type="image/png" href="assets/img/favicon/title.png" />
+    <!-- STYLES -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
 
-	<meta name="description" content="Name of your web site">
-	<meta name="author" content="Marketify">
+    <link rel="stylesheet" type="text/css" href="assets/css/plugins.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/darkMode.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- /STYLES -->
+  </head>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <body class="light">
+    <!-- PRELOADER -->
+    <div id="preloader">
+      <div class="loader_line"></div>
+    </div>
+    <!-- /PRELOADER -->
+    <!-- WRAPPER ALL -->
+    <div class="grax_tm_all_wrap" data-magic-cursor="" data-color="brown">
+      <!-- MODALBOX NEWS -->
+      <div class="grax_tm_modalbox_news">
+        <div class="box_inner">
+          <div class="close">
+            <a href="#"
+              ><img class="svg" src="assets/img/svg/cancel.svg" alt=""
+            /></a>
+          </div>
+          <div class="description_wrap scrollable"></div>
+        </div>
+      </div>
+      <!-- /MODALBOX NEWS -->
 
-	<title>Emre ALTIN</title>
-	<link rel="icon" type="image/png" href="assets/img/favicon/title.png" />
-	<!-- STYLES -->
-	<link
-		href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
-		rel="stylesheet">
+      <!-- TOPBAR -->
+      <div class="grax_tm_topbar">
+        <div class="container">
+          <div class="topbar_inner">
+            <div class="logo">
+              <a class="dark" href="#"
+                ><img src="assets/img/logo/dark.png" alt=""
+              /></a>
+              <a class="light" href="#"
+                ><img src="assets/img/logo/logo.png" alt=""
+              /></a>
+            </div>
+            <div class="menu">
+              <ul class="anchor_nav">
+                <li class="current"><a href="#home">Anasayfa</a></li>
+                <li><a href="#about">Ben Kimim?</a></li>
+                <li><a href="#portfolio">Portfolyo</a></li>
+                <li><a href="#news">Profil</a></li>
+                <li><a href="#contact">İletişim</a></li>
+                <li>
+                  <input type="checkbox" class="checkbox" id="checkbox" />
+                  <label for="checkbox" class="checkbox-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                  </label>
+                </li>
+                <li class="language-selector">
+                  <select id="language-select">
+                    <option value="index.html" selected>Türkçe</option>
+                    <option value="en.html">English</option>
+                  </select>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /TOPBAR -->
 
+      <!-- MOBILE MENU -->
+      <div class="grax_tm_mobile_menu">
+        <div class="topbar_inner">
+          <div class="container bigger">
+            <div class="topbar_in">
+              <div class="logo">
+                <a href="#" class="logo-link"></a>
+              </div>
+              <div class="my_trigger">
+                <div class="hamburger hamburger--collapse-r">
+                  <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown">
+          <div class="container">
+            <div class="dropdown_inner">
+              <ul class="anchor_nav">
+                <li><a href="#home">Anasayfa</a></li>
+                <li><a href="#about">Ben Kimim?</a></li>
+                <li><a href="#portfolio">Portfolyo</a></li>
+                <li><a href="#news">Profil</a></li>
+                <li><a href="#contact">İletişim</a></li>
+                <li>
+                  <input
+                    type="checkbox"
+                    class="checkbox"
+                    id="mobile-checkbox"
+                  />
+                  <label for="mobile-checkbox" class="checkbox-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                  </label>
+                </li>
+                <li class="language-selector">
+                  <select id="mobile-language-select">
+                    <option value="index.html" selected>Türkçe</option>
+                    <option value="en.html">English</option>
+                  </select>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /MOBILE MENU -->
 
-	<link rel="stylesheet" type="text/css" href="assets/css/plugins.css" />
-	<link rel="stylesheet" type="text/css" href="assets/css/colors.css" />
-	<link rel="stylesheet" type="text/css" href="assets/css/darkMode.css" />
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-	<!-- /STYLES -->
+      <!-- HERO -->
+      <div class="grax_tm_hero" id="home">
+        <div class="bg">
+          <div
+            class="image"
+            data-img-url="assets/img/slider/header-bg.jpg"
+          ></div>
+          <div class="overlay"></div>
+        </div>
+        <div class="content">
+          <div class="container">
+            <div style="justify-content: center; display: flex">
+              <div class="details" data-animation="toTop">
+                <h3 class="fn_animation name">EMRE ALTIN</h3>
+                <span class="fn_animation job">Front-End Developer</span>
+              </div>
+            </div>
+            <div class="grax_tm_down" data-skin="light">
+              <div class="line_wrapper">
+                <div class="line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /HERO -->
 
-</head>
+      <!-- ABOUT -->
+      <div class="grax_tm_section" id="about">
+        <div class="grax_tm_about">
+          <div class="container">
+            <div class="about_inner">
+              <div class="left wow fadeInLeft" data-wow-duration="1.5s">
+                <div class="image parallax" data-relative-input="true">
+                  <img src="assets/img/placeholders/emre.png" alt="" />
+                  <div
+                    class="main layer"
+                    data-img-url="assets/img/placeholders/emre.png"
+                    data-depth="0.04"
+                  ></div>
+                </div>
+              </div>
+              <div
+                class="right wow fadeInLeft"
+                data-wow-duration="1.5s"
+                data-wow-delay=".2s"
+              >
+                <div class="grax_tm_title_holder">
+                  <h3>Ben <span>Kimim?</span></h3>
+                </div>
+                <div class="text">
+                  <p>
+                    Kütahya Dumlupınar Üniversitesi Bilgisayar Mühendisliği
+                    mezunuyum. HTML, CSS, JavaScript gibi temel web
+                    teknolojilerine hakimim ve React kütüphanesini de biliyorum.
+                    Ayrıca, modern Front-end kütüphaneleri ve araçlarında
+                    deneyimliyim. Şu anda Kotlin ile mobil uygulama geliştirme
+                    üzerinde çalışıyorum.
+                  </p>
+                </div>
+                <div class="list">
+                  <ul>
+                    <li>
+                      <div class="list_inner">
+                        <img
+                          class="svg"
+                          src="assets/img/svg/checked.svg"
+                          alt=""
+                        />
+                        <span>Web Geliştirme</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list_inner">
+                        <img
+                          class="svg"
+                          src="assets/img/svg/checked.svg"
+                          alt=""
+                        />
+                        <span>Mobil Uygulama</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list_inner">
+                        <img
+                          class="svg"
+                          src="assets/img/svg/checked.svg"
+                          alt=""
+                        />
+                        <span>Sosyal Medya Marketing</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="list_inner">
+                        <img
+                          class="svg"
+                          src="assets/img/svg/checked.svg"
+                          alt=""
+                        />
+                        <span>İçerik Üretimi</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="grax_tm_button">
+                  <a href="assets/pdf/EmreAltinCV.pdf" download class="button"
+                    >CV İndir</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /ABOUT -->
 
+      <!-- PORTFOLIO -->
+      <div class="grax_tm_section" id="portfolio">
+        <div class="grax_tm_portfolio">
+          <div class="container">
+            <div class="grax_tm_title_holder">
+              <h3>PORT<span>FOLYO</span></h3>
+            </div>
+            <div class="portfolio_list">
+              <ul class="gallery_zoom my_waypoint">
+                <li
+                  class="wow fadeInLeft"
+                  data-wow-duration="1.5s"
+                  data-wow-delay=".4s"
+                >
+                  <div class="list_inner">
+                    <div class="image">
+                      <img src="assets/img/placeholders/1-1.jpg" alt="" />
+                      <div
+                        class="main"
+                        data-img-url="assets/img/portfolio/powerfit.png"
+                      ></div>
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="details">
+                      <img src="assets/img/portfolio/powerfit1.png" alt="" />
+                      <span>Mobil Uygulama</span>
+                      <h3>PowerFit</h3>
+                    </div>
+                    <a
+                      class="grax_tm_full_link"
+                      href="https://github.com/emrealtnn/PowerFit"
+                    ></a>
+                  </div>
+                </li>
+                <li class="wow fadeInLeft" data-wow-duration="1.5s">
+                  <div class="list_inner">
+                    <div class="image">
+                      <img src="assets/img/portfolio/iksvinc.png" alt="" />
+                      <div
+                        class="main"
+                        data-img-url="assets/img/portfolio/iksvinc.png"
+                      ></div>
+                    </div>
+                    <div class="overlay"></div>
+                    <div class="details">
+                      <img src="assets/img/portfolio/iksvinc1.png" alt="" />
+                      <span>Web Site</span>
+                      <h3>İKS Vinç Hizmetleri</h3>
+                    </div>
+                    <a
+                      class="grax_tm_full_link popup-youtube"
+                      href="https://iksvinc.com/"
+                    ></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /PORTFOLIO -->
+      <!-- PROGRESS -->
+      <div class="grax_tm_progress_part">
+        <div class="container">
+          <div class="part_inner">
+            <div class="left wow fadeInLeft" data-wow-duration="1.5s">
+              <h3>
+                Yazılım geliştirme ve programlama alanlarında yetkinliği hızla
+                kazanabilirim
+              </h3>
+              <p>
+                Yeni bir programlama dilini hızla öğrenip, kısa sürede projeler
+                geliştirebilirim. Zamanla bu bilgiyi daha da derinleştirir ve
+                ileri seviyelere taşırım. Ayrıca, ekip çalışmasına uyum
+                sağlayabilir ve takım içinde etkin bir şekilde görev alabilirim.
+              </p>
+            </div>
+            <div
+              class="right wow fadeInLeft"
+              data-wow-duration="1.5s"
+              data-wow-delay=".2s"
+            >
+              <div class="kioto_progress">
+                <div class="progress_inner" data-value="85">
+                  <span
+                    ><span class="label">Web Geliştirme</span
+                    ><span class="number">85%</span></span
+                  >
+                  <div class="background">
+                    <div class="bar">
+                      <div class="bar_in"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="progress_inner" data-value="50">
+                  <span
+                    ><span class="label">Kotlin</span
+                    ><span class="number">50%</span></span
+                  >
+                  <div class="background">
+                    <div class="bar">
+                      <div class="bar_in"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="progress_inner" data-value="40">
+                  <span
+                    ><span class="label">Laravel</span
+                    ><span class="number">40%</span></span
+                  >
+                  <div class="background">
+                    <div class="bar">
+                      <div class="bar_in"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /PROGRESS -->
 
-<body class="light">
+      <!-- TALK -->
+      <div class="grax_tm_section">
+        <div class="grax_tm_talk">
+          <div class="container">
+            <div class="talk_inner">
+              <div class="text wow fadeInLeft" data-wow-duration="1.5s">
+                <h3>
+                  <span
+                    >Freelance çalışma için müsait olduğumu belirtmek
+                    isterim</span
+                  >
+                </h3>
+              </div>
+              <div
+                class="button wow fadeInLeft anchor"
+                data-wow-duration="1.5s"
+                data-wow-delay=".2s"
+              >
+                <a href="#contact">İletişime Geç</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /TALK -->
 
-	<!-- PRELOADER -->
-	<div id="preloader">
-		<div class="loader_line"></div>
-	</div>
-	<!-- /PRELOADER -->
-	<!-- WRAPPER ALL -->
-	<div class="grax_tm_all_wrap" data-magic-cursor="" data-color="brown">
+      <!-- NEWS -->
+      <div class="grax_tm_section" id="news">
+        <div class="grax_tm_news">
+          <div class="container">
+            <div class="grax_tm_title_holder">
+              <h3>Yetenekler ve <span> Deneyimler</span></h3>
+            </div>
+            <div class="news_list">
+              <ul>
+                <li class="wow fadeInLeft" data-wow-duration="1.5s">
+                  <div class="list_inner">
+                    <div class="image">
+                      <img src="assets/img/placeholders/4-3.jpg" alt="" />
+                      <div
+                        class="main"
+                        data-img-url="assets/img/skills/yetenekler2.png"
+                      ></div>
+                      <a class="grax_tm_full_link" href="#"></a>
+                    </div>
+                    <div class="details">
+                      <h3 class="title"><a href="#">Yabancı Diller</a></h3>
+                    </div>
+                    <div class="description">
+                      <div class="kioto_progress">
+                        <div class="progress_inner" data-value="60">
+                          <span style="color: black !important"
+                            ><span class="label">İngilizce</span
+                            ><span class="number">Orta Seviye</span></span
+                          >
+                          <div class="background">
+                            <div class="bar">
+                              <div
+                                class="bar_in"
+                                style="background-color: #6c9295"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="progress_inner" data-value="40">
+                          <span style="color: black !important"
+                            ><span class="label">Almanca</span
+                            ><span class="number">Başlangıç Seviye</span></span
+                          >
+                          <div class="background">
+                            <div class="bar">
+                              <div
+                                class="bar_in"
+                                style="background-color: #6c9295"
+                              ></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="wow fadeInLeft"
+                  data-wow-duration="1.5s"
+                  data-wow-delay=".2s"
+                >
+                  <div class="list_inner">
+                    <div class="image">
+                      <img src="assets/img/placeholders/4-3.jpg" alt="" />
+                      <div
+                        class="main"
+                        data-img-url="assets/img/skills/yetenekler1.png"
+                      ></div>
+                      <a class="grax_tm_full_link" href="#"></a>
+                    </div>
+                    <div class="details">
+                      <h3 class="title"><a href="#">Referanslar</a></h3>
+                    </div>
+                    <div class="description">
+                      <blockquote>
+                        <span>
+                          <p>İbrahim KUZİK</p>
+                        </span>
+                        <p>Akpınar Bilişim - Kıdemli Sistem Uzmanı</p>
+                        <a
+                          href="https://www.linkedin.com/in/ibrahimkuzik/"
+                          style="color: black"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >LinkedIn | İbrahim Kuzik</a
+                        >
+                      </blockquote>
+                      <blockquote>
+                        <span>
+                          <p>Eren SÖZÜGEÇER</p>
+                        </span>
+                        <p>Kodugeçer Teknoloji - Şirket Sahibi</p>
+                        <a
+                          href="https://www.linkedin.com/in/erensozugecer/"
+                          style="color: black"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >LinkedIn | Eren Sözügeçer</a
+                        >
+                      </blockquote>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="wow fadeInLeft"
+                  data-wow-duration="1.5s"
+                  data-wow-delay=".4s"
+                >
+                  <div class="list_inner">
+                    <div class="image">
+                      <img src="assets/img/placeholders/4-3.jpg" alt="" />
+                      <div
+                        class="main"
+                        data-img-url="assets/img/skills/yetenekler3.png"
+                      ></div>
+                      <a class="grax_tm_full_link" href="#"></a>
+                    </div>
+                    <div class="details">
+                      <h3 class="title"><a href="#">Beceriler</a></h3>
+                    </div>
+                    <div class="description">
+                      <blockquote>
+                        <ul style="padding-left: 1rem">
+                          <li>İnisiyatif ve Sorumluluk Alma</li>
+                          <li>Problem Çözme</li>
+                          <li>Detaylara Önem Verme</li>
+                          <li>Araştırma Yapabilme</li>
+                          <li>İyi İletişim Kurabilme</li>
+                          <li>Yaratıcılık</li>
+                          <li>Planlama ve Organizasyon</li>
+                          <li>Hızlı ve Etkili Kararlar Alabilme</li>
+                          <li>Takım Çalışmasında Rol Alma</li>
+                        </ul>
+                      </blockquote>
+                    </div>
+                  </div>
+                </li>
+                <li
+                  class="wow fadeInLeft"
+                  data-wow-duration="1.5s"
+                  data-wow-delay=".2s"
+                >
+                  <div class="list_inner">
+                    <div class="image">
+                      <img src="assets/img/placeholders/4-3.jpg" alt="" />
+                      <div
+                        class="main"
+                        data-img-url="assets/img/skills/yetenekler4.png"
+                      ></div>
+                      <a class="grax_tm_full_link" href="#"></a>
+                    </div>
+                    <div class="details">
+                      <h3 class="title"><a href="#">Sertifikalar</a></h3>
+                    </div>
+                    <div class="description">
+                      <blockquote>
+                        <span>
+                          <p>Kotlin Programlama Dili</p>
+                        </span>
+                        <a
+                          href="assets/pdf/Kotlin.pdf"
+                          download
+                          style="color: black"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Sertifikayı İndir</a
+                        >
+                      </blockquote>
+                      <blockquote>
+                        <span>
+                          <p>HTML5 ile Web Geliştirme</p>
+                        </span>
+                        <a
+                          href="assets/pdf/HTML.pdf"
+                          download
+                          style="color: black"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Sertifikayı İndir</a
+                        >
+                      </blockquote>
+                      <blockquote>
+                        <span>
+                          <p>Bootstrap 5</p>
+                        </span>
+                        <a
+                          href="assets/pdf/Bootstrap.pdf"
+                          download
+                          style="color: black"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          >Sertifikayı İndir</a
+                        >
+                      </blockquote>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /NEWS -->
 
+      <!-- CONTACT -->
+      <div class="grax_tm_contact" id="contact">
+        <div class="container">
+          <div class="grax_tm_title_holder">
+            <h3>İLETİŞİME <span>GEÇİN</span></h3>
+          </div>
+          <div class="contact_inner">
+            <div class="left wow fadeInLeft" data-wow-duration="1s">
+              <div class="text">
+                <p>
+                  Lütfen benimle iletişime geçmek için bu bölümdeki formu
+                  doldurun veya arayın.
+                </p>
+              </div>
+              <div class="info_list">
+                <ul>
+                  <li>
+                    <div class="list_inner">
+                      <img
+                        class="svg"
+                        src="assets/img/svg/location.svg"
+                        alt=""
+                      />
+                      <p>
+                        <span class="first">Adres:</span
+                        ><span class="second">Osmangazi/Bursa</span>
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list_inner">
+                      <img class="svg" src="assets/img/svg/email.svg" alt="" />
+                      <p>
+                        <span class="first">Email:</span
+                        ><span class="second"
+                          ><a href="mailto:emrealtin1107@gmail.com">
+                            emrealtin1107@gmail.com</a
+                          ></span
+                        >
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list_inner">
+                      <img class="svg" src="assets/img/svg/phone.svg" alt="" />
+                      <p>
+                        <span class="first">Telefon:</span
+                        ><span class="second"
+                          ><a href="tel:+905456463672"
+                            >+90 545 646 36 72</a
+                          ></span
+                        >
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list_inner">
+                      <img
+                        class="svg"
+                        src="assets/img/svg/social/linkedin.svg"
+                        alt=""
+                      />
+                      <p>
+                        <span class="first">LinkedIn:</span>
+                        <span class="second">
+                          <a
+                            href="https://www.linkedin.com/in/emrealtn5"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            LinkedIn | Emre Altın
+                          </a>
+                        </span>
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="list_inner">
+                      <img
+                        class="svg"
+                        src="assets/img/svg/social/github.svg"
+                        alt="GitHub Logo"
+                      />
+                      <p>
+                        <span class="first">Github:</span>
+                        <span class="second">
+                          <a
+                            href="https://github.com/emrealtn5"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Github | @emrealtn5
+                          </a>
+                        </span>
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="right wow fadeInLeft"
+              data-wow-duration="1s"
+              data-wow-delay=".2s"
+            >
+              <div class="fields">
+                <form id="contact_form">
+                  <div
+                    class="first"
+                    data-success="Your message has been received, We will contact you soon."
+                  ></div>
+                  <div class="empty_notice">
+                    <span>Lütfen Gerekli Alanları Doldurun</span>
+                  </div>
+                  <div class="first">
+                    <ul>
+                      <li>
+                        <input
+                          id="name"
+                          name="name"
+                          type="text"
+                          placeholder="Ad Soyadı"
+                          required
+                        />
+                      </li>
+                      <li>
+                        <input
+                          id="email"
+                          name="email"
+                          type="email"
+                          placeholder="Email"
+                          required
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="last">
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Mesaj"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="grax_tm_button">
+                    <button id="send_message" type="submit">GÖNDER</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <script>
+              document
+                .getElementById("contact_form")
+                .addEventListener("submit", function (event) {
+                  event.preventDefault();
+                  emailjs.send("service_086q3be", "template_4quoops").then(
+                    function () {
+                      alert("Mesajınız gönderildi.");
+                    },
+                    function (error) {
+                      alert(
+                        "Mesaj gönderilirken bir hata oluştu: " +
+                          JSON.stringify(error)
+                      );
+                    }
+                  );
+                });
+            </script>
+          </div>
+        </div>
+      </div>
+      <!-- /CONTACT -->
+      <script>
+        document
+          .getElementById("contact_form")
+          .addEventListener("submit", function (e) {
+            alert("Form gönderildi.");
+          });
+      </script>
+      <!-- COPYRIGHT -->
+      <div class="grax_tm_section">
+        <div class="grax_tm_copyright">
+          <div class="my_wave">
+            <svg
+              width="100%"
+              height="100%"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <defs></defs>
+              <path
+                id="wave_img"
+                data-color="#fff"
+                d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z"
+                fill="#fff"
+              ></path>
+            </svg>
+          </div>
+          <div class="container">
+            <div class="copyright_inner">
+              <div class="logo wow fadeInLeft" data-wow-duration="1s">
+                <img src="assets/img/logo/logo.png" alt="" />
+              </div>
 
-		<!-- MODALBOX NEWS -->
-		<div class="grax_tm_modalbox_news">
-			<div class="box_inner">
-				<div class="close">
-					<a href="#"><img class="svg" src="assets/img/svg/cancel.svg" alt="" /></a>
-				</div>
-				<div class="description_wrap scrollable">
-				</div>
-			</div>
-		</div>
-		<!-- /MODALBOX NEWS -->
+              <div
+                class="copy wow fadeInLeft"
+                data-wow-duration="1s"
+                data-wow-delay=".4s"
+              >
+                <p>&copy; Copyright 2025 By Emre ALTIN</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /COPYRIGHT -->
 
-		<!-- TOPBAR -->
-		<div class="grax_tm_topbar">
-			<div class="container">
-				<div class="topbar_inner">
-					<div class="logo">
-						<a class="dark" href="#"><img src="assets/img/logo/dark.png" alt="" /></a>
-						<a class="light" href="#"><img src="assets/img/logo/logo.png" alt="" /></a>
-					</div>
-					<div class="menu">
-						<ul class="anchor_nav">
-							<li class="current"><a href="#home">Anasayfa</a></li>
-							<li><a href="#about">Ben Kimim?</a></li>
-							<li><a href="#portfolio">Portfolyo</a></li>
-							<li><a href="#news">Profil</a></li>
-							<li><a href="#contact">İletişim</a></li>
-							<li>
-								<input type="checkbox" class="checkbox" id="checkbox">
-								<label for="checkbox" class="checkbox-label">
-									<i class="fas fa-moon"></i>
-									<i class="fas fa-sun"></i>
-									<span class="ball"></span>
-								</label>
-							</li>
-							<li class="language-selector"> 
-								<select id="language-select"> 
-									<option value="index.html" selected>Türkçe</option> 
-									<option value="en.html">English</option> 
-								</select>
-							</li>
-						</ul>
+      <!-- CURSOR -->
+      <div class="mouse-cursor cursor-outer"></div>
+      <div class="mouse-cursor cursor-inner"></div>
+      <!-- /CURSOR -->
 
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /TOPBAR -->
+      <!-- START: Page Progress -->
+      <div class="progressbar">
+        <a href="#"><span class="text">To Top</span></a>
+        <span class="line"></span>
+      </div>
+      <!-- END: Page Progress -->
+    </div>
+    <!-- / WRAPPER ALL -->
 
+    <!-- SCRIPTS -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/init.js"></script>
 
-		<!-- MOBILE MENU -->
-		<div class="grax_tm_mobile_menu">
-			<div class="topbar_inner">
-				<div class="container bigger">
-					<div class="topbar_in">
-						<div class="logo"> 
-							<a href="#" class="logo-link"></a> 
-						</div>
-						<div class="my_trigger">
-							<div class="hamburger hamburger--collapse-r">
-								<div class="hamburger-box">
-									<div class="hamburger-inner"></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="dropdown">
-				<div class="container">
-					<div class="dropdown_inner">
-						<ul class="anchor_nav">
-							<li><a href="#home">Anasayfa</a></li>
-							<li><a href="#about">Ben Kimim?</a></li>
-							<li><a href="#portfolio">Portfolyo</a></li>
-							<li><a href="#news">Profil</a></li>
-							<li><a href="#contact">İletişim</a></li>
-							<li>
-								<input type="checkbox" class="checkbox" id="mobile-checkbox">
-								<label for="mobile-checkbox" class="checkbox-label">
-									<i class="fas fa-moon"></i>
-									<i class="fas fa-sun"></i>
-									<span class="ball"></span>
-								</label>
-							</li>
-							<li class="language-selector"> 
-								<select id="mobile-language-select"> 
-									<option value="index.html" selected>Türkçe</option> 
-									<option value="en.html">English</option> 
-								</select>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /MOBILE MENU -->
-
-		<!-- HERO -->
-		<div class="grax_tm_hero" id="home">
-			<div class="bg">
-				<div class="image" data-img-url="assets/img/slider/header-bg.jpg"></div>
-				<div class="overlay"></div>
-			</div>
-			<div class="content">
-				<div class="container">
-					<div style="justify-content: center; display: flex;">
-					<div class="details" data-animation="toTop">
-						<h3 class="fn_animation name">EMRE ALTIN</h3>
-						<span class="fn_animation job">Front-End Developer</span>
-					</div>
-				</div>
-					<div class="grax_tm_down" data-skin="light">
-						<div class="line_wrapper">
-							<div class="line"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /HERO -->
-
-		<!-- ABOUT -->
-		<div class="grax_tm_section" id="about">
-			<div class="grax_tm_about">
-				<div class="container">
-					<div class="about_inner">
-						<div class="left wow fadeInLeft" data-wow-duration="1.5s">
-							<div class="image parallax" data-relative-input="true">
-								<img src="assets/img/placeholders/emre.png" alt="" />
-								<div class="main layer" data-img-url="assets/img/placeholders/emre.png" data-depth="0.04">
-								</div>
-							</div>
-						</div>
-						<div class="right wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
-							<div class="grax_tm_title_holder">
-								<h3>Ben <span>Kimim?</span></h3>
-							</div>
-							<div class="text">
-								<p>Kütahya Dumlupınar Üniversitesi Bilgisayar Mühendisliği mezunuyum. HTML, CSS,
-									JavaScript gibi temel web
-									teknolojilerine hakimim ve React kütüphanesini de biliyorum. Ayrıca, modern
-									Front-end kütüphaneleri ve araçlarında deneyimliyim. Şu anda Kotlin ile mobil
-									uygulama geliştirme üzerinde çalışıyorum.
-								</p>
-							</div>
-							<div class="list">
-								<ul>
-									<li>
-										<div class="list_inner">
-											<img class="svg" src="assets/img/svg/checked.svg" alt="" />
-											<span>Web Geliştirme</span>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<img class="svg" src="assets/img/svg/checked.svg" alt="" />
-											<span>Mobil Uygulama</span>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<img class="svg" src="assets/img/svg/checked.svg" alt="" />
-											<span>Sosyal Medya Marketing</span>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<img class="svg" src="assets/img/svg/checked.svg" alt="" />
-											<span>İçerik Üretimi</span>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<div class="grax_tm_button">
-								<a href="assets/pdf/EmreAltinCV.pdf" download class="button">CV İndir</a>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /ABOUT -->
-
-		<!-- PORTFOLIO -->
-		<div class="grax_tm_section" id="portfolio">
-			<div class="grax_tm_portfolio">
-				<div class="container">
-					<div class="grax_tm_title_holder">
-						<h3> PORT<span>FOLYO</span></h3>
-					</div>
-					<div class="portfolio_list">
-						<ul class="gallery_zoom my_waypoint">
-							<li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
-								<div class="list_inner">
-									<div class="image">
-										<img src="assets/img/placeholders/1-1.jpg" alt="" />
-										<div class="main" data-img-url="assets/img/portfolio/powerfit.png"></div>
-									</div>
-									<div class="overlay"></div>
-									<div class="details">
-										<img src="assets/img/portfolio/powerfit1.png" alt="" />
-										<span>Mobil Uygulama</span>
-										<h3>PowerFit</h3>
-									</div>
-									<a class="grax_tm_full_link" href="https://github.com/emrealtnn/PowerFit"></a>
-								</div>
-							</li>
-
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /PORTFOLIO -->
-		<!-- PROGRESS -->
-		<div class="grax_tm_progress_part">
-			<div class="container">
-				<div class="part_inner">
-					<div class="left wow fadeInLeft" data-wow-duration="1.5s">
-						<h3>Yazılım geliştirme ve programlama alanlarında yetkinliği hızla kazanabilirim</h3>
-						<p>Yeni bir programlama dilini hızla öğrenip, kısa sürede projeler geliştirebilirim.
-							Zamanla bu bilgiyi daha da derinleştirir ve ileri seviyelere taşırım.
-							Ayrıca, ekip çalışmasına uyum sağlayabilir ve takım içinde etkin bir şekilde görev
-							alabilirim.</p>
-					</div>
-					<div class="right wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
-						<div class="kioto_progress">
-							<div class="progress_inner" data-value="85">
-								<span><span class="label">Web Geliştirme</span><span class="number">85%</span></span>
-								<div class="background">
-									<div class="bar">
-										<div class="bar_in"></div>
-									</div>
-								</div>
-							</div>
-							<div class="progress_inner" data-value="50">
-								<span><span class="label">Kotlin</span><span class="number">50%</span></span>
-								<div class="background">
-									<div class="bar">
-										<div class="bar_in"></div>
-									</div>
-								</div>
-							</div>
-							<div class="progress_inner" data-value="40">
-								<span><span class="label">Laravel</span><span class="number">40%</span></span>
-								<div class="background">
-									<div class="bar">
-										<div class="bar_in"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /PROGRESS -->
-
-		<!-- TALK -->
-		<div class="grax_tm_section">
-			<div class="grax_tm_talk">
-				<div class="container">
-					<div class="talk_inner">
-						<div class="text wow fadeInLeft" data-wow-duration="1.5s">
-							<h3><span>Freelance çalışma için müsait olduğumu belirtmek isterim</span></h3>
-						</div>
-						<div class="button wow fadeInLeft anchor" data-wow-duration="1.5s" data-wow-delay=".2s">
-							<a href="#contact">İletişime Geç</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /TALK -->
-
-		<!-- NEWS -->
-		<div class="grax_tm_section" id="news">
-			<div class="grax_tm_news">
-				<div class="container">
-					<div class="grax_tm_title_holder">
-						<h3>Yetenekler ve <span> Deneyimler</span></h3>
-					</div>
-					<div class="news_list">
-						<ul>
-							<li class="wow fadeInLeft" data-wow-duration="1.5s">
-								<div class="list_inner">
-									<div class="image">
-										<img src="assets/img/placeholders/4-3.jpg" alt="" />
-										<div class="main" data-img-url="assets/img/skills/yetenekler2.png"></div>
-										<a class="grax_tm_full_link" href="#"></a>
-									</div>
-									<div class="details">
-										<h3 class="title"><a href="#">Yabancı Diller</a></h3>
-									</div>
-									<div class="description">
-										<div class="kioto_progress">
-											<div class="progress_inner" data-value="60">
-												<span style="color: black !important;"><span
-														class="label">İngilizce</span><span class="number">Orta
-														Seviye</span></span>
-												<div class="background">
-													<div class="bar">
-														<div class="bar_in" style="background-color: #6C9295;"></div>
-													</div>
-												</div>
-											</div>
-											<div class="progress_inner" data-value="40">
-												<span style="color: black !important;"><span
-														class="label">Almanca</span><span class="number">Başlangıç
-														Seviye</span></span>
-												<div class="background">
-													<div class="bar">
-														<div class="bar_in" style="background-color: #6C9295;"></div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".2s">
-								<div class="list_inner">
-									<div class="image">
-										<img src="assets/img/placeholders/4-3.jpg" alt="" />
-										<div class="main" data-img-url="assets/img/skills/yetenekler1.png"></div>
-										<a class="grax_tm_full_link" href="#"></a>
-									</div>
-									<div class="details">
-										<h3 class="title"><a href="#">Referanslar</a></h3>
-									</div>
-									<div class="description">
-										<blockquote><span>
-												<p>İbrahim KUZİK</p>
-											</span>
-											<p>Akpınar Bilişim - Kıdemli Sistem Uzmanı</p>
-											<a href="https://www.linkedin.com/in/ibrahimkuzik/" style=" color: black;" target="_blank" rel="noopener noreferrer">LinkedIn | İbrahim Kuzik</a>
-										</blockquote>
-										<blockquote><span>
-												<p>Eren SÖZÜGEÇER</p>
-											</span>
-											<p>Kodugeçer Teknoloji - Şirket Sahibi</p>
-											<a href="https://www.linkedin.com/in/erensozugecer/" style=" color: black;" target="_blank" rel="noopener noreferrer">LinkedIn | Eren Sözügeçer</a>
-										</blockquote>
-
-									</div>
-								</div>
-							</li>
-							<li class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".4s">
-								<div class="list_inner">
-									<div class="image">
-										<img src="assets/img/placeholders/4-3.jpg" alt="" />
-										<div class="main" data-img-url="assets/img/skills/yetenekler3.png"></div>
-										<a class="grax_tm_full_link" href="#"></a>
-									</div>
-									<div class="details">
-										<h3 class="title"><a href="#">Beceriler</a></h3>
-									</div>
-									<div class="description">
-										<blockquote>
-											<ul style="padding-left: 1rem;">
-												<li>İnisiyatif ve Sorumluluk Alma</li>
-												<li>Problem Çözme</li>
-												<li>Detaylara Önem Verme</li>
-												<li>Araştırma Yapabilme</li>
-												<li>İyi İletişim Kurabilme</li>
-												<li>Yaratıcılık</li>
-												<li>Planlama ve Organizasyon</li>
-												<li>Hızlı ve Etkili Kararlar Alabilme</li>
-												<li>Takım Çalışmasında Rol Alma</li>
-											</ul>
-										</blockquote>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /NEWS -->
-
-		<!-- CONTACT -->
-		<div class="grax_tm_contact" id="contact">
-			<div class="container">
-				<div class="grax_tm_title_holder">
-					<h3>İLETİŞİME <span>GEÇİN</span></h3>
-				</div>
-				<div class="contact_inner">
-					<div class="left wow fadeInLeft" data-wow-duration="1s">
-						<div class="text">
-							<p>Lütfen benimle iletişime geçmek için bu bölümdeki formu doldurun veya arayın.</p>
-						</div>
-						<div class="info_list">
-							<ul>
-								<li>
-									<div class="list_inner">
-										<img class="svg" src="assets/img/svg/location.svg" alt="" />
-										<p><span class="first">Adres:</span><span class="second">Osmangazi/Bursa</span>
-										</p>
-									</div>
-								</li>
-								<li>
-									<div class="list_inner">
-										<img class="svg" src="assets/img/svg/email.svg" alt="" />
-										<p><span class="first">Email:</span><span class="second"><a
-													href="mailto:emrealtin1107@gmail.com">
-													emrealtin1107@gmail.com</a></span>
-										</p>
-									</div>
-								</li>
-								<li>
-									<div class="list_inner">
-										<img class="svg" src="assets/img/svg/phone.svg" alt="" />
-										<p><span class="first">Telefon:</span><span class="second"><a
-													href="tel:+905456463672">+90 545 646 36 72</a></span></p>
-									</div>
-								</li>
-								<li>
-									<div class="list_inner">
-										<img class="svg" src="assets/img/svg/social/linkedin.svg" alt="" />
-										<p>
-											<span class="first">LinkedIn:</span>
-											<span class="second">
-												<a href="https://www.linkedin.com/in/emrealtn5" target="_blank" rel="noopener noreferrer">
-													LinkedIn | Emre Altın
-												</a>
-											</span>
-										</p>
-									</div>
-								</li>
-								<li>
-									<div class="list_inner">
-										<img class="svg" src="assets/img/svg/social/github.svg" alt="GitHub Logo" />
-										<p>
-											<span class="first">Github:</span>
-											<span class="second">
-												<a href="https://github.com/emrealtn5" target="_blank" rel="noopener noreferrer">
-													Github | @emrealtn5
-												</a>
-											</span>
-										</p>
-									</div>
-								</li>
-								
-							</ul>
-						</div>
-					</div>
-					<div class="right wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s"> 
-						<div class="fields"> 
-							<form id="contact_form"> 
-								<div class="first" data-success="Your message has been received, We will contact you soon."></div> 
-								<div class="empty_notice"><span>Lütfen Gerekli Alanları Doldurun</span>
-								</div> 
-								<div class="first"> 
-									<ul> 
-										<li>
-											<input id="name" name="name" type="text" placeholder="Ad Soyadı" required>
-										</li> 
-										<li>
-											<input id="email" name="email" type="email" placeholder="Email" required>
-										</li> 
-									</ul> 
-								</div> 
-								<div class="last"> 
-									<textarea id="message" name="message" placeholder="Mesaj" required></textarea> 
-								</div> 
-								<div class="grax_tm_button"> 
-									<button id="send_message" type="submit">GÖNDER</button> 
-								</div> 
-							</form> 
-						</div> 
-					</div> 
-					<script> 
-					document.getElementById('contact_form').addEventListener('submit', function(event) { event.preventDefault(); emailjs.send("service_086q3be","template_4quoops")
-					.then(function() { 
-						alert('Mesajınız gönderildi.'); 
-						}, 
-						function(error) { 
-						alert('Mesaj gönderilirken bir hata oluştu: ' + JSON.stringify(error)); 
-						}); }); 
-					</script>
-				</div>
-			</div>
-		</div>
-		<!-- /CONTACT -->
-<script>document.getElementById("contact_form").addEventListener("submit", function(e) {
-    alert("Form gönderildi.");
-});
-</script>
-		<!-- COPYRIGHT -->
-		<div class="grax_tm_section">
-			<div class="grax_tm_copyright">
-				<div class="my_wave">
-					<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
-						<defs></defs>
-						<path id="wave_img" data-color="#fff"
-							d="M 0 185.609 C 317.16666666666663 118.136 317.16666666666663 118.136 634.3333333333333 151.87 C 951.4999999999999 185.609 951.4999999999999 185.609 1268.6666666666665 116.402 C 1585.833333333333 47.195 1585.833333333333 47.195 1903 131.925 L 1903 507 L 0 507 Z"
-							fill="#fff"></path>
-					</svg>
-				</div>
-				<div class="container">
-					<div class="copyright_inner">
-						<div class="logo wow fadeInLeft" data-wow-duration="1s">
-							<img src="assets/img/logo/logo.png" alt="" />
-						</div>
-
-						<div class="copy wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".4s">
-							<p>&copy; Copyright 2025 By Emre ALTIN </p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /COPYRIGHT -->
-
-		<!-- CURSOR -->
-		<div class="mouse-cursor cursor-outer"></div>
-		<div class="mouse-cursor cursor-inner"></div>
-		<!-- /CURSOR -->
-
-		<!-- START: Page Progress -->
-		<div class="progressbar">
-			<a href="#"><span class="text">To Top</span></a>
-			<span class="line"></span>
-		</div>
-		<!-- END: Page Progress -->
-
-	</div>
-	<!-- / WRAPPER ALL -->
-
-	<!-- SCRIPTS -->
-	<script src="assets/js/jquery.js"></script>
-	<script src="assets/js/plugins.js"></script>
-	<script src="assets/js/init.js"></script>
-
-	<!-- /SCRIPTS -->
-
-</body>
-
-
+    <!-- /SCRIPTS -->
+  </body>
 </html>
