@@ -784,34 +784,53 @@
               </div>
             </div>
             <script>
-              document
-                .getElementById("contact_form")
-                .addEventListener("submit", function (event) {
-                  event.preventDefault();
-                  emailjs.send("service_086q3be", "template_4quoops").then(
-                    function () {
-                      alert("Your message has been sent.");
-                    },
-                    function (error) {
-                      alert(
-                        "An error occurred while sending the message: " +
-                          JSON.stringify(error)
-                      );
-                    }
-                  );
-                });
-            </script>
+  (function () {
+    const form = document.getElementById('contact_form');
+    const nameEl = document.getElementById('name');
+    const emailEl = document.getElementById('email');
+    const messageEl = document.getElementById('message');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const name = nameEl.value.trim();
+      const email = emailEl.value.trim();
+      const message = messageEl.value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill out the required fields.');
+        return;
+      }
+
+      if (window.emailjs && typeof emailjs.send === 'function') {
+        emailjs
+          .send('service_086q3be', 'template_4quoops', {
+            from_name: name,
+            reply_to: email,
+            message: message,
+          })
+          .then(
+            function () {
+              alert('Your message has been sent.');
+              form.reset();
+            },
+            function (error) {
+              alert('An error occurred while sending the message: ' + JSON.stringify(error));
+            }
+          );
+      } else {
+        // Fallback via mailto if EmailJS is not configured
+        const subject = 'Contact Form (' + encodeURIComponent(name) + ')';
+        const body = encodeURIComponent(message + '\n\nFrom: ' + name + ' <' + email + '>');
+        window.location.href = 'mailto:emrealtin1107@gmail.com?subject=' + subject + '&body=' + body;
+      }
+    });
+  })();
+</script>
           </div>
         </div>
       </div>
       <!-- /CONTACT -->
-      <script>
-        document
-          .getElementById("contact_form")
-          .addEventListener("submit", function (e) {
-            alert("Form gönderildi.");
-          });
-      </script>
       <!-- COPYRIGHT -->
       <div class="grax_tm_section">
         <div class="grax_tm_copyright">
@@ -868,7 +887,50 @@
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/init.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      try {
+        // TODO: Replace with your own EmailJS Public Key
+        emailjs.init({ publicKey: 'REPLACE_WITH_YOUR_PUBLIC_KEY' });
+      } catch (e) {
+        console.debug('EmailJS init skipped or failed:', e);
+      }
+    </script>
+    <script>
+      (function () {
+        const body = document.body;
+        const cb = document.getElementById('checkbox');
+        const mcb = document.getElementById('mobile-checkbox');
+        const THEME_KEY = 'theme';
 
+        function apply(theme) {
+          body.classList.toggle('dark', theme === 'dark');
+          body.classList.toggle('light', theme !== 'dark');
+          if (cb) cb.checked = theme === 'dark';
+          if (mcb) mcb.checked = theme === 'dark';
+        }
+
+        const saved = localStorage.getItem(THEME_KEY);
+        apply(saved || 'light');
+
+        function toggle(from) {
+          const theme = from && from.checked ? 'dark' : 'light';
+          localStorage.setItem(THEME_KEY, theme);
+          apply(theme);
+          if (from === cb && mcb) mcb.checked = from.checked;
+          if (from === mcb && cb) cb.checked = from.checked;
+        }
+
+        if (cb) cb.addEventListener('change', function () { toggle(cb); });
+        if (mcb) mcb.addEventListener('change', function () { toggle(mcb); });
+
+        const ls = document.getElementById('language-select');
+        const mls = document.getElementById('mobile-language-select');
+        function nav(sel) { if (sel && sel.value) { window.location.href = sel.value; } }
+        if (ls) ls.addEventListener('change', function () { nav(ls); });
+        if (mls) mls.addEventListener('change', function () { nav(mls); });
+      })();
+    </script>
     <!-- /SCRIPTS -->
   </body>
 </html>
