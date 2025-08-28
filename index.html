@@ -31,6 +31,10 @@
   </head>
 
   <body class="light">
+    <noscript>
+      <style>#preloader{display:none !important}</style>
+      JavaScript kapalı görünüyor. Lütfen tarayıcınızda JavaScript'i etkinleştirin.
+    </noscript>
     <!-- PRELOADER -->
     <div id="preloader">
       <div class="loader_line"></div>
@@ -884,6 +888,18 @@
     <!-- / WRAPPER ALL -->
 
     <!-- SCRIPTS -->
+    <script>
+      (function(){
+        function hidePreloader(){
+          var p = document.getElementById('preloader');
+          if(p){ p.style.display = 'none'; }
+        }
+        // Try on load
+        window.addEventListener('load', hidePreloader);
+        // Safety timeout in case other scripts fail
+        setTimeout(hidePreloader, 4000);
+      })();
+    </script>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/init.js"></script>

@@ -31,6 +31,10 @@
   </head>
 
   <body class="light">
+    <noscript>
+      <style>#preloader{display:none !important}</style>
+      It looks like JavaScript is disabled. Please enable JavaScript in your browser.
+    </noscript>
     <!-- PRELOADER -->
     <div id="preloader">
       <div class="loader_line"></div>
@@ -884,6 +888,18 @@
     <!-- / WRAPPER ALL -->
 
     <!-- SCRIPTS -->
+    <script>
+      (function(){
+        function hidePreloader(){
+          var p = document.getElementById('preloader');
+          if(p){ p.style.display = 'none'; }
+        }
+        // Hide after page load
+        window.addEventListener('load', hidePreloader);
+        // And also hide after a timeout as a safety net
+        setTimeout(hidePreloader, 4000);
+      })();
+    </script>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/init.js"></script>
