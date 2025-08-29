@@ -28,6 +28,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <!-- /STYLES -->
+    <style id="preloader-failsafe-style">
+      .js-ready .grax_tm_all_wrap { opacity: 1 !important; visibility: visible !important; }
+      #preloader[style*="display: none"] { display: none !important; }
+    </style>
   </head>
 
   <body class="light">
@@ -890,14 +894,37 @@
     <!-- SCRIPTS -->
     <script>
       (function(){
-        function hidePreloader(){
+        function reallyHide(){
           var p = document.getElementById('preloader');
           if(p){ p.style.display = 'none'; }
+          var wrap = document.querySelector('.grax_tm_all_wrap');
+          if (wrap) {
+            wrap.style.opacity = '1';
+            wrap.style.visibility = 'visible';
+          }
+          document.documentElement.style.overflow = '';
+          document.body.style.overflow = '';
+          document.documentElement.classList.add('js-ready');
+          document.body.classList.add('js-ready');
         }
-        // Hide after page load
+
+        function hidePreloader(){
+          try { reallyHide(); } catch(e) {}
+        }
+
+        // Early: as soon as DOM is ready
+        document.addEventListener('DOMContentLoaded', hidePreloader);
+        // Late: when all resources are loaded
         window.addEventListener('load', hidePreloader);
-        // And also hide after a timeout as a safety net
-        setTimeout(hidePreloader, 4000);
+        // Safety: retry a few times in case other scripts flip states
+        var tries = 0;
+        var iv = setInterval(function(){
+          hidePreloader();
+          tries++;
+          if (tries > 5) clearInterval(iv);
+        }, 1500);
+        // Final safety after 8 seconds
+        setTimeout(hidePreloader, 8000);
       })();
     </script>
     <script src="assets/js/jquery.js"></script>

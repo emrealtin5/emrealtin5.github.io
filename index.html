@@ -28,6 +28,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <!-- /STYLES -->
+  <style id="preloader-failsafe-style">
+    .js-ready .grax_tm_all_wrap { opacity: 1 !important; visibility: visible !important; }
+    #preloader[style*="display: none"] { display: none !important; }
+  </style>
   </head>
 
   <body class="light">
@@ -890,14 +894,39 @@
     <!-- SCRIPTS -->
     <script>
       (function(){
-        function hidePreloader(){
+        function reallyHide(){
           var p = document.getElementById('preloader');
           if(p){ p.style.display = 'none'; }
+          // Sayfayı görünür kıl
+          var wrap = document.querySelector('.grax_tm_all_wrap');
+          if (wrap) {
+            wrap.style.opacity = '1';
+            wrap.style.visibility = 'visible';
+          }
+          // Olası scroll kilidini kaldır
+          document.documentElement.style.overflow = '';
+          document.body.style.overflow = '';
+          document.documentElement.classList.add('js-ready');
+          document.body.classList.add('js-ready');
         }
-        // Try on load
+
+        function hidePreloader(){
+          try { reallyHide(); } catch(e) {}
+        }
+
+        // Erken: DOM yüklendiğinde
+        document.addEventListener('DOMContentLoaded', hidePreloader);
+        // Geç: tüm kaynaklar yüklendiğinde
         window.addEventListener('load', hidePreloader);
-        // Safety timeout in case other scripts fail
-        setTimeout(hidePreloader, 4000);
+        // Emniyet: art arda birkaç kez dene
+        var tries = 0;
+        var iv = setInterval(function(){
+          hidePreloader();
+          tries++;
+          if (tries > 5) clearInterval(iv);
+        }, 1500);
+        // Son emniyet: 8 sn sonra yine gizle
+        setTimeout(hidePreloader, 8000);
       })();
     </script>
     <script src="assets/js/jquery.js"></script>
