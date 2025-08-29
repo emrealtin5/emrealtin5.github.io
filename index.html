@@ -32,6 +32,10 @@
     .js-ready .grax_tm_all_wrap { opacity: 1 !important; visibility: visible !important; }
     #preloader[style*="display: none"] { display: none !important; }
   </style>
+  <style id="wow-failsafe-style">
+    /* If animation libraries fail, show content */
+    .wow { visibility: visible !important; opacity: 1 !important; }
+  </style>
   </head>
 
   <body class="light">
@@ -935,6 +939,28 @@
         }, 1500);
         // Son emniyet: 8 sn sonra yine gizle
         setTimeout(hidePreloader, 8000);
+      })();
+    </script>
+    <script>
+      // Fallback: apply background-images from data-img-url without relying on external libs
+      (function(){
+        function applyBg(el){
+          var url = el.getAttribute('data-img-url');
+          if(url){ el.style.backgroundImage = 'url("' + url + '")'; }
+        }
+        function run(){
+          var mains = document.querySelectorAll('[data-img-url]');
+          for(var i=0;i<mains.length;i++){ applyBg(mains[i]); }
+          // In case dynamic content appears late, retry a couple of times
+          var n=0, t = setInterval(function(){
+            var more = document.querySelectorAll('[data-img-url]');
+            for(var j=0;j<more.length;j++){ applyBg(more[j]); }
+            n++; if(n>3) clearInterval(t);
+          }, 1000);
+        }
+        if(document.readyState === 'loading'){
+          document.addEventListener('DOMContentLoaded', run);
+        } else { run(); }
       })();
     </script>
     <script src="assets/js/jquery.js"></script>
