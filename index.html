@@ -792,30 +792,34 @@
               </div>
             </div>
             <script>
-  (function () {
-    const form = document.getElementById('contact_form');
-    const nameEl = document.getElementById('name');
-    const emailEl = document.getElementById('email');
-    const messageEl = document.getElementById('message');
+(function () {
+  const form = document.getElementById('contact_form');
+  if (!form) { return; }
 
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
+  const nameEl = document.getElementById('name');
+  const emailEl = document.getElementById('email');
+  const messageEl = document.getElementById('message');
+  if (!nameEl || !emailEl || !messageEl) { return; }
 
-      const name = nameEl.value.trim();
-      const email = emailEl.value.trim();
-      const message = messageEl.value.trim();
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
 
-      if (!name || !email || !message) {
-        alert('Lütfen gerekli alanları doldurun.');
-        return;
-      }
+    const name = nameEl.value.trim();
+    const email = emailEl.value.trim();
+    const message = messageEl.value.trim();
 
+    if (!name || !email || !message) {
+      alert('Lütfen gerekli alanları doldurun.');
+      return;
+    }
+
+    try {
       if (window.emailjs && typeof emailjs.send === 'function') {
         emailjs
           .send('service_086q3be', 'template_4quoops', {
             from_name: name,
             reply_to: email,
-            message: message,
+            message: message
           })
           .then(
             function () {
@@ -826,14 +830,18 @@
               alert('Mesaj gönderilirken bir hata oluştu: ' + JSON.stringify(error));
             }
           );
-      } else {
-        // EmailJS yapılandırılmadıysa, mailto ile yedek gönderim
-        const subject = 'İletişim Formu (' + encodeURIComponent(name) + ')';
-        const body = encodeURIComponent(message + '\n\nGönderen: ' + name + ' <' + email + '>');
-        window.location.href = 'mailto:emrealtin1107@gmail.com?subject=' + subject + '&body=' + body;
+        return;
       }
-    });
-  })();
+    } catch (e) {
+      // mailto fallback aşağıda
+    }
+
+    // EmailJS yoksa/başarısızsa mailto yedeği
+    const subject = 'İletişim Formu (' + encodeURIComponent(name) + ')';
+    const body = encodeURIComponent(message + '\n\nGönderen: ' + name + ' <' + email + '>');
+    window.location.href = 'mailto:emrealtin1107@gmail.com?subject=' + subject + '&body=' + body;
+  });
+})();
 </script>
           </div>
         </div>
