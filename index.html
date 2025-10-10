@@ -78,11 +78,18 @@
                     <span class="ball"></span>
                   </label>
                 </li>
-                <li class="language-selector">
-                  <select id="language-select">
-                    <option value="index.html" selected>Türkçe</option>
-                    <option value="en.html">English</option>
-                  </select>
+                <li class="language-selector nav-item">
+                  <div class="btn-group" role="group" aria-label="Dil Seçimi">
+                    <a
+                      href="index.html"
+                      class="btn btn-outline-primary btn-sm active"
+                      aria-current="page"
+                      >TR</a
+                    >
+                    <a href="en.html" class="btn btn-outline-primary btn-sm"
+                      >EN</a
+                    >
+                  </div>
                 </li>
               </ul>
             </div>
@@ -195,12 +202,14 @@
                 </div>
                 <div class="text">
                   <p>
-                      Kütahya Dumlupınar Üniversitesi Bilgisayar Mühendisliği mezunuyum. 
-                      Web geliştirme alanında HTML, CSS, JavaScript ve React teknolojileriyle 
-                      kullanıcı dostu arayüzler oluşturdum. Bunun yanında PHP ve Laravel ile 
-                      Back-end geliştirme deneyimim bulunuyor. Şu anda iOS geliştirme üzerine 
-                      odaklanarak Swift dili ve Xcode ortamında projeler geliştiriyorum. Yeni 
-                      teknolojilere açık, öğrenmeyi ve üretmeyi seven bir yazılım geliştiricisiyim.
+                    Kütahya Dumlupınar Üniversitesi Bilgisayar Mühendisliği
+                    mezunuyum. Web geliştirme alanında HTML, CSS, JavaScript ve
+                    React teknolojileriyle kullanıcı dostu arayüzler oluşturdum.
+                    Bunun yanında PHP ve Laravel ile Back-end geliştirme
+                    deneyimim bulunuyor. Şu anda iOS geliştirme üzerine
+                    odaklanarak Swift dili ve Xcode ortamında projeler
+                    geliştiriyorum. Yeni teknolojilere açık, öğrenmeyi ve
+                    üretmeyi seven bir yazılım geliştiricisiyim.
                   </p>
                 </div>
                 <div class="list">
@@ -444,7 +453,7 @@
                       <img src="assets/img/placeholders/4-3.jpg" alt="" />
                       <div
                         class="main"
-                        data-img-url="assets/img/skills/yetenekler2.png"
+                        data-img-url="assets/img/skills/language.png"
                       ></div>
                       <a class="grax_tm_full_link" href="#"></a>
                     </div>
@@ -495,7 +504,7 @@
                       <img src="assets/img/placeholders/4-3.jpg" alt="" />
                       <div
                         class="main"
-                        data-img-url="assets/img/skills/yetenekler1.png"
+                        data-img-url="assets/img/skills/reference.png"
                       ></div>
                       <a class="grax_tm_full_link" href="#"></a>
                     </div>
@@ -542,7 +551,7 @@
                       <img src="assets/img/placeholders/4-3.jpg" alt="" />
                       <div
                         class="main"
-                        data-img-url="assets/img/skills/yetenekler3.png"
+                        data-img-url="assets/img/skills/skill.png"
                       ></div>
                       <a class="grax_tm_full_link" href="#"></a>
                     </div>
@@ -576,7 +585,7 @@
                       <img src="assets/img/placeholders/4-3.jpg" alt="" />
                       <div
                         class="main"
-                        data-img-url="assets/img/skills/yetenekler4.png"
+                        data-img-url="assets/img/skills/certificate.png"
                       ></div>
                       <a class="grax_tm_full_link" href="#"></a>
                     </div>
@@ -726,7 +735,11 @@
               data-wow-delay=".2s"
             >
               <div class="fields">
-                <form id="contact_form">
+                <form
+                  id="contact_form"
+                  action="https://formspree.io/f/mgvnnpea"
+                  method="POST"
+                >
                   <div
                     class="first"
                     data-success="Your message has been received, We will contact you soon."
@@ -738,19 +751,21 @@
                     <ul>
                       <li>
                         <input
+                          class="form-control"
                           id="name"
                           name="name"
                           type="text"
-                          placeholder="Ad Soyadı"
+                          placeholder="Adınız Soyadınız"
                           required
                         />
                       </li>
                       <li>
                         <input
+                          class="form-control"
                           id="email"
                           name="email"
                           type="email"
-                          placeholder="Email"
+                          placeholder="Email Adresiniz"
                           required
                         />
                       </li>
@@ -758,9 +773,10 @@
                   </div>
                   <div class="last">
                     <textarea
+                      class="form-control"
                       id="message"
                       name="message"
-                      placeholder="Mesaj"
+                      placeholder="Mesajınızı Yazınız"
                       required
                     ></textarea>
                   </div>
@@ -770,35 +786,11 @@
                 </form>
               </div>
             </div>
-            <script>
-              document
-                .getElementById("contact_form")
-                .addEventListener("submit", function (event) {
-                  event.preventDefault();
-                  emailjs.send("service_086q3be", "template_4quoops").then(
-                    function () {
-                      alert("Mesajınız gönderildi.");
-                    },
-                    function (error) {
-                      alert(
-                        "Mesaj gönderilirken bir hata oluştu: " +
-                          JSON.stringify(error)
-                      );
-                    }
-                  );
-                });
-            </script>
           </div>
         </div>
       </div>
       <!-- /CONTACT -->
-      <script>
-        document
-          .getElementById("contact_form")
-          .addEventListener("submit", function (e) {
-            alert("Form gönderildi.");
-          });
-      </script>
+
       <!-- COPYRIGHT -->
       <div class="grax_tm_section">
         <div class="grax_tm_copyright">
