@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>İyi ki Doğdun Sena</title>
+  <style>
+    :root {
+      --bg-color: #050505;
+      --text-color: #ffffff;
+      --accent-color: #b11226;
+      --font-serif: Georgia, 'Times New Roman', serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      --max-content-width: 760px;
+      --transition-duration: 0.8s;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+      font-weight: 400;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem;
+      max-width: var(--max-content-width);
+      margin-left: auto;
+      margin-right: auto;
+      overflow-x: hidden;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(80px) scale(.96);
+      filter: blur(12px);
+      transition:
+        opacity .9s cubic-bezier(.22,1,.36,1),
+        transform .9s cubic-bezier(.22,1,.36,1),
+        filter .9s cubic-bezier(.22,1,.36,1);
+      will-change: opacity, transform, filter;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+
+    section.hero {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 1rem;
+      font-family: var(--font-serif);
+      color: var(--text-color);
+      gap: 1rem;
+    }
+    section.hero small {
+      font-size: 1.2rem;
+      letter-spacing: 0.2em;
+      font-weight: 600;
+      color: var(--accent-color);
+    }
+    section.hero h1 {
+      font-size: 52px;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.1;
+    }
+    section.hero small.bottom {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--accent-color);
+      margin-top: 2rem;
+      letter-spacing: 0.15em;
+    }
+
+    section.chapter {
+      position: relative;
+      width: 100%;
+      max-width: var(--max-content-width);
+      margin: 5rem 0 3rem 0;
+      padding: 0 1rem;
+      font-family: var(--font-serif);
+      color: var(--text-color);
+      overflow: visible;
+    }
+    section.chapter .bg-number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 160px;
+      font-weight: 900;
+      color: rgba(177, 18, 38, 0.07);
+      user-select: none;
+      pointer-events: none;
+      z-index: 0;
+      line-height: 1;
+      font-family: var(--font-serif);
+    }
+    section.chapter .content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    section.chapter h2 {
+      font-size: 52px;
+      font-weight: 700;
+      margin: 5rem 0 1rem 0;
+      line-height: 1.1;
+      color: var(--accent-color);
+    }
+    section.chapter p {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 0;
+      color: var(--text-color);
+    }
+
+    .photo-full {
+      width: 100%;
+      max-width: var(--max-content-width);
+      height: 420px;
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #171717, #0d0d0d);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      margin: 3rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 1.5rem;
+      font-weight: 600;
+      user-select: none;
+      font-family: var(--font-sans);
+    }
+
+    section.letter-wrapper {
+      width: 100%;
+      max-width: var(--max-content-width);
+      margin: 5rem 0 5rem 0;
+      padding: 0 1rem;
+    }
+
+    section.letter-wrapper > h2 {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 4rem;
+      text-align: center;
+      color: var(--accent-color);
+    }
+
+    section.letter {
+      background-color: transparent;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--text-color);
+      padding: 0 1rem;
+      user-select: text;
+      max-width: 100%;
+      font-family: var(--font-sans);
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(177, 18, 38, .15);
+      border-radius: 18px;
+      padding: 28px;
+      backdrop-filter: blur(8px);
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    section.letter p {
+      margin: 0;
+      white-space: pre-line;
+      text-align: center;
+    }
+
+    section.final {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--accent-color);
+      text-align: center;
+      margin-bottom: 3rem;
+      line-height: 1.5;
+      padding: 0 1rem;
+      white-space: pre-line;
+      max-width: var(--max-content-width);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    section.final video {
+      width: 100%;
+      max-width: 720px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(177, 18, 38, 0.5);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    section.final small {
+      display: block;
+      margin-top: 0.75rem;
+      color: rgba(177, 18, 38, 0.7);
+      font-weight: 400;
+      font-size: 0.9rem;
+    }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 22px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      background: var(--accent-color);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+      box-shadow: 0 10px 25px rgba(177,18,38,.35);
+    }
+    .download-btn:hover,
+    .download-btn:focus {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 35px rgba(177,18,38,.45);
+      background: #cb1730;
+    }
+
+    @media (max-width: 600px) {
+      section.hero h1 {
+        font-size: 36px;
+      }
+      section.chapter h2 {
+        font-size: 36px;
+      }
+      section.chapter .bg-number {
+        font-size: 100px;
+      }
+      section.letter-wrapper > h2 {
+        font-size: 28px;
+      }
+      section.final {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero reveal" aria-label="Hero Bölümü">
+    <small>17 · 07 . 2003</small>
+    <h1>Sana Anlatmak İstediğim Bir Şey Var</h1>
+    <small class="bottom">Kaydır ↓</small>
+  </section>
+
+  <section class="chapter reveal" aria-label="Bölüm 1">
+    <div class="bg-number" aria-hidden="true">♡</div>
+    <div class="content">
+      <h2>Sen Geldin.</h2>
+      <p>Ve hayatımın en güzel tesadüflerinden biri oldun.</p>
+    </div>
+  </section>
+
+  <div class="photo-full reveal" aria-label="Fotoğraf 1">
+    <img src="sena/resim1.png" alt="Sena'nın Fotoğrafı" style="width: 100%; height: 100%; object-fit: cover;" />
+  </div>
+
+  <section class="chapter reveal" aria-label="Bölüm 2">
+    <div class="bg-number" aria-hidden="true">♡</div>
+    <div class="content">
+      <h2>Sonra...</h2>
+      <p>Kahkahalar, yolculuklar, küçük tartışmalar... Hepsi bugün baktığımda en sevdiğim anılar olmuş.</p>
+    </div>
+  </section>
+
+  <div class="photo-full reveal" aria-label="Fotoğraf 2">
+    <img src="sena/resim2.png" alt="Sena'nın Fotoğrafı" style="width: 100%; height: 100%; object-fit: cover;" />
+  </div>
+
+  <section class="letter-wrapper reveal" aria-label="Mektup Bölümü">
+    <h2>Ve</h2>
+    <section class="letter" aria-label="Teşekkür Mektubu">
+      <p>
+            Sana kelimelerle anlatamayacağım kadar teşekkür etmek istiyorum. Hayatıma dokunuşun, bana verdiğin güç ve her zaman yanımda oluşun paha biçilemez. Seninle geçen her an, zamanın durduğu ve sadece bizim olduğumuz anlara dönüşüyor. İyi ki varsın, iyi ki hayatımdasın. Bu yolculukta seninle olmak, her zorluğu kolaylaştırıyor ve her mutluluğu katlıyor. Seni çok seviyorum ve nice güzel anılar biriktirmek için sabırsızlanıyorum.
+      </p>
+    </section>
+  </section>
+
+  <section class="final reveal" aria-label="Son Mesaj">
+        <small>Bu videoyu sonuna kadar izle... ❤️</small>
+    <video id="finalVideo" playsinline controls preload="metadata" aria-label="Son video">
+      <source src="sena/video.mov" type="video/mp4" />
+      Tarayıcınız video etiketini desteklemiyor.
+    </video>
+    <a class="download-btn" href="sena/video.mov" download> Videoyu İndir</a>
+  </section>
+
+  <script>
+    // IntersectionObserver to reveal elements on scroll
+    const revealElements = document.querySelectorAll('.reveal');
+
+    const observerOptions = {
+      threshold: 0.18,
+      rootMargin: '0px 0px -10% 0px'
+    };
+
+    const revealOnScroll = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(revealOnScroll, observerOptions);
+    revealElements.forEach((el, index) => {
+      el.style.transitionDelay = `${index * 120}ms`;
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
